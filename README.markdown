@@ -1,11 +1,12 @@
-CodeIgniter-Message
-================
+# CodeIgniter-Message
 
-CodeIgniter-Message is a small codeigniter library for giving feedback to the user. 
+The Message library (originally based on http://codeigniter.com/wiki/Message/)
+is a fairly straightforward Codeigniter library that makes it easier
+to set different type of messages such as errors and notifications. Traditionally you'd
+use $this->session->set_flashdata() but this can result in a lot of code for something
+so simple.
 
-
-Configuration
--------------
+## Configuration
 
 All configuration is optional. It gives you a handy way of setting default values for 
 your message container, the html element you want to wrap your individual messages with, 
@@ -32,8 +33,7 @@ the default view to format messages
 	
 	$config['message_view'] = 'message_view';`
 	
-Basic Functions
------
+## Basic Functions
 
 Set a message
 
@@ -64,8 +64,8 @@ Show a group of messages
 
 	echo $this->message->display('notice');
 
-Automagic functions
------
+## Automagic functions
+
 If you have a message_folder defined in the config, any message key that matches a view will be autoloaded:
 
 	$this->message->set('notice','this is just a notice');
@@ -79,19 +79,20 @@ The basic layout for any view looks like this:
 		
 This gives you freedom to style any message any way you want from within a view.
 
-Installation
------
+## Installation
 
 Drop the libraries/Message.php file into your application/libraries folder.
 
-Requirements
------
+## Requirements
 
-Only CodeIgniter
+* Codeigniter 1.7.X or newer
 
-Extra
------
+## License
 
-If you'd like to request changes, report bug fixes, or contact
-the developer of this library, email <email.n0xie@gmail.com>
+This library is licensed under the MIT license, a copy of this license can be found in the
+file called "LICENSE".
 
+## Extra
+
+If you happen to encounter a bug or would like to request a feature you can use the
+bugtracker provided by GitHub or send an Email to github@isset.nl.

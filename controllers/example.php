@@ -5,6 +5,7 @@ class Example extends Controller {
 	function __construct()
 	{
 		parent::__construct();
+
 		$this->load->helper('url');
 		$this->load->library('message');
 	}
@@ -23,9 +24,10 @@ class Example extends Controller {
 	function notice()
 	{
 		$data = array(
-					'message'=>'this is just a message',
-					'notice'=>'this is just a notice'
-					);
+			'message'=>'this is just a message',
+			'notice'=>'this is just a notice'
+		);
+
 		$this->message->set($data);
 		$this->index();
 	}
@@ -34,7 +36,8 @@ class Example extends Controller {
 	{
 		$this->message->set('message','this is just a message');
 		$this->message->set('error','this is an error');
-		redirect(site_url('example'));
+
+		redirect('example');
 	}
 	
 }
